@@ -1,22 +1,16 @@
 # GNCTR NAIT website
 
-Static site (no build step). Open `index.html` or host the folder as-is.
+Static multi-page site, no build step. Open `index.html`, or host the folder as-is.
 
-```
-index.html          page markup
-css/styles.css      all styles
-js/main.js          all scripts (team lists are at the top of this file)
-assets/img/         logo, team, sponsor and gallery photos
-assets/docs/        sponsorship package PDF
-.nojekyll           tells GitHub Pages to serve files as they are
-```
+Pages: `index.html` (home), `about.html`, `teams.html`, `sponsors.html`, `letter.html`, `gallery.html`
+Shared: `css/styles.css`, `js/main.js`, `assets/` (images, sponsorship package PDF), `.nojekyll`
 
-## Host on GitHub Pages
-1. Create a repository and upload everything in this folder to the repo root (so `index.html` is at the top level).
-2. Repo Settings > Pages > Source: "Deploy from a branch", Branch: `main`, folder `/ (root)`, then Save.
-3. After a minute the site is live at `https://<username>.github.io/<repo-name>/`.
+## GitHub Pages
+1. Upload everything in this folder to the root of a repo.
+2. Settings > Pages > Deploy from a branch > `main` / root > Save.
+3. Live at `https://<username>.github.io/<repo-name>/` after a minute.
 
-## Common edits
-- Executive and team leaders: edit the `EXEC` and `LEADERS` lists at the top of `js/main.js`. Put photos in `assets/img/team/`.
-- Replace the sponsorship package: overwrite `assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf` with the same file name.
-- New sponsor logo or gallery photo: add the file under `assets/img/` and copy an existing sponsor chip or gallery item in `index.html`.
+## Edits
+- Headline font: change `--display` at the top of `css/styles.css`.
+- Navigation and footer are repeated in each page, so edit them in all six files.
+- Add a sponsor: copy a `.logo` block in `sponsors.html` and `index.html`, and add the file to `assets/img/sponsors/`.

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GNCTR NAIT</title>
+<meta name="description" content="GNCTR Club at NAIT: a student team designing, building and racing a concrete toboggan at the Great Northern Concrete Toboggan Race, Edmonton, January 27-30, 2027.">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div id="scroll-progress" aria-hidden="true"></div>
+<header>
+  <div class="wrap top-in">
+    <div class="brand-row"><a class="mark" href="#about" aria-label="GNCTR NAIT home"><span class="logo mark-logo" role="img" aria-label="GNCTR NAIT Team logo"></span><span class="mark-txt"><span class="mark-t">GNCTR NAIT</span><span class="mark-s">Concrete toboggan team</span></span></a>
+    <a class="icon-link" href="https://www.instagram.com/gnctr_nait/" target="_blank" rel="noopener" aria-label="GNCTR Club at NAIT on Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div>
+    <div class="top-cta">
+      <a class="btn btn-primary" href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener">Join our team</a>
+      <a id="donate-btn" class="btn" href="#sponsors" data-scroll="support-panel">Donate / Sponsor</a>
+      <a class="btn" href="mailto:gnctrclubnait@gmail.com">Contact</a>
+    
+      <button type="button" id="theme-btn" class="theme-icon" data-mode="light" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Pages">
+  <div class="wrap">
+    <ul>
+      <li><a href="#about" data-route="about">Home</a></li>
+      <li><a href="#team" data-route="team">Team</a></li>
+      <li><a href="#sponsors" data-route="sponsors">Sponsors</a></li>
+      <li><a href="#gallery" data-route="gallery">Gallery</a></li>
+      <li><a href="#news" data-route="news">Press</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <!-- ABOUT -->
+    <section id="page-about" class="page">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">GNCTR Club at NAIT &middot; Edmonton, Alberta</p>
+          <h1>We pour <span class="grad">concrete</span> and race it down a hill.</h1>
+          <p>We&rsquo;re a team of engineering technology students from across NAIT&rsquo;s programs, competing in GNCTR, a national design-and-build competition held annually. This year it&rsquo;s in Edmonton, and our team brings together students from a range of disciplines who&rsquo;ve competed together before and are now building for 2027.</p>
+          <p>We&rsquo;ll design and build the toboggan ourselves, present it at technical exhibitions, and race it against institutions from across Canada. GNCTR is a tradition among engineering schools, a chance to show technical ability, design skill, and procurement, and it has drawn national media coverage.</p>
+          <div class="actions">
+            <a class="btn btn-primary pkg" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" target="_blank" rel="noopener"><span class="lbl">Sponsorship package</span></a>
+          </div>
+        </div>
+        <div class="logo hero-logo" role="img" aria-label="GNCTR NAIT Team logo, established 1974"></div>
+      </div>
+
+      <div class="race-strip" id="race-strip">
+        <div class="rs-label"><span class="rs-kicker">Race week begins in</span><strong>Jan 27&ndash;30, 2027 &middot; Edmonton</strong></div>
+        <div class="rs-tiles" aria-live="off">
+          <div class="rs-tile"><b data-cd="d">--</b><span>Days</span></div>
+          <div class="rs-tile"><b data-cd="h">--</b><span>Hours</span></div>
+          <div class="rs-tile"><b data-cd="m">--</b><span>Min</span></div>
+          <div class="rs-tile"><b data-cd="s">--</b><span>Sec</span></div>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Concrete &bull; Snow &bull; Engineering &bull; Jan 27&ndash;30, 2027 &bull; Edmonton &bull; Design &bull; Build &bull; Race &bull; </span><span>Concrete &bull; Snow &bull; Engineering &bull; Jan 27&ndash;30, 2027 &bull; Edmonton &bull; Design &bull; Build &bull; Race &bull; </span></div></div>
+
+      <div class="stats">
+        <div class="stat"><b data-to="500" data-suffix="+">0</b><span>students hosted each year</span></div>
+        <div class="stat"><b data-to="1974" data-plain="1">0</b><span>the tradition began</span></div>
+        <div class="stat"><b data-to="4">0</b><span>core vehicle systems</span></div>
+        <div class="stat"><b data-to="5">0</b><span>riders per toboggan</span></div>
+      </div>
+
+      <div class="photo-row">
+        <figure><img src="assets/img/gallery/three-gnctr-nait-team-members-in.jpg" alt="Three GNCTR NAIT team members in safety glasses scooping gravel into a tray on a scale in the lab" width="410" height="600"><figcaption>Team members in the lab</figcaption></figure>
+        <div>
+          <p class="eyebrow">Meet the team</p>
+          <h2>Students who get their hands dirty.</h2>
+          <p class="lede">We are a student-led team. We choose the materials, weigh the mix, build the toboggan and test it. Then we explain every design decision at the event.</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow">What the team does</p>
+        <div class="three">
+          <div><h3>Design</h3><p>We plan the toboggan, choose a concrete mix, and work out how it will steer and stop.</p></div>
+          <div><h3>Build</h3><p>Members cast, fabricate and test the toboggan, then fix whatever the tests find.</p></div>
+          <div><h3>Race</h3><p>We take the finished toboggan to the event and race it against teams from other schools.</p></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-h">In the press</div>
+        <div class="panel-b">
+          <a class="card snap" href="#news">
+            <p class="meta">Global News</p>
+            <h3>Can you race a concrete toboggan? NAIT students say &lsquo;yes&rsquo;</h3>
+            <p>Our team was previously featured on Global News.</p>
+            <span class="snap-cta">View press</span>
+          </a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Gallery</div>
+        <div class="panel-b">
+          <div class="gallery mini" id="home-gallery" tabindex="0" aria-label="Photo preview. Scroll sideways to see more."></div>
+          <div class="pkg-actions" style="margin-top:0"><a class="btn btn-primary" href="#gallery"><span class="lbl">View full gallery</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="page-team" class="page" hidden>
+      <div>
+        <p class="eyebrow">2026&ndash;27</p>
+        <h2>Our team</h2>
+        <p class="lede">The students who run the club and lead each part of the toboggan.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Executive</div>
+        <div class="panel-b">
+          <p class="lede" style="margin:0 auto">The students who run the team, manage the budget and represent us to sponsors and the school.</p>
+          <div class="cards" id="exec-grid"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Team leads</div>
+        <div class="panel-b">
+          <p class="lede" style="margin:0 auto">Each lead looks after one part of the toboggan or the team. Talk to them if you want to help.</p>
+          <div class="cards" id="leader-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="page-sponsors" class="page" hidden>
+      <div>
+        <p class="eyebrow">Thank you</p>
+        <h2>Our sponsors</h2>
+        <p class="lede">Companies and people who back the team make the build and the trip to the race possible.</p>
+      </div>
+      <div class="panel plain">
+        <div class="panel-b"><div class="tier-stack">
+        <div class="tier-box platinum"><div class="tier-bar">Platinum sponsors</div><div class="marquee" data-dir="left"><div class="track"><div class="chip" role="img" aria-label="Aman Builders"><img src="assets/img/sponsors/aman-builders.svg" alt="" width="200" height="105"></div></div></div></div>
+        <div class="tier-box silver"><div class="tier-bar">Silver sponsors</div><div class="marquee" data-dir="left"><div class="track"><div class="chip" role="img" aria-label="J.R. Paine &amp; Associates Ltd."><img src="assets/img/sponsors/jr-paine-associates.png" alt="" width="200" height="144"></div><div class="chip" role="img" aria-label="Journey Engineering"><img src="assets/img/sponsors/journey-engineering.jpg" alt="" width="520" height="206"></div></div></div></div>
+        <div class="tier-box bronze"><div class="tier-bar">Bronze sponsors</div><div class="marquee" data-dir="left"><div class="track"><div class="chip" role="img" aria-label="Thurber Engineering"><img src="assets/img/sponsors/thurber-engineering.png" alt="" width="200" height="77"></div><div class="chip" role="img" aria-label="LN LDT"><span class="wordmark">LN LDT</span></div></div></div></div>
+      </div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Partnership levels</div>
+        <div class="panel-b">
+<div>
+        <p class="lede">We welcome monetary sponsorships, materials, fabrication support and custom partnerships.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier bronze"><div class="tier-h"><h3>Bronze</h3><span>$500&ndash;$1,499</span></div><ul><li>Social media thank-you</li><li>Technical exhibition board</li><li>Technical report credit</li><li>Logo on toboggan: <b>6 in</b></li></ul></div>
+        <div class="tier silver"><div class="tier-h"><h3>Silver</h3><span>$1,500&ndash;$2,499</span></div><ul><li>Social media thank-you</li><li>Technical exhibition board</li><li>Technical report credit</li><li>Logo on toboggan: <b>9 in</b></li><li>Opt-in student r&eacute;sum&eacute;s</li></ul></div>
+        <div class="tier gold"><div class="tier-h"><h3>Gold</h3><span>$2,500&ndash;$4,999</span></div><ul><li>Social media thank-you</li><li>Technical exhibition board</li><li>Technical report credit</li><li>Logo on toboggan: <b>12 in</b></li><li>Opt-in student r&eacute;sum&eacute;s</li><li>Framed team photo</li></ul></div>
+        <div class="tier platinum"><div class="tier-h"><h3>Platinum</h3><span>$5,000+</span></div><ul><li>Social media thank-you</li><li>Technical exhibition board</li><li>Technical report credit</li><li>Logo on toboggan: <b>15 in</b></li><li>Opt-in student r&eacute;sum&eacute;s</li><li>Framed team photo</li><li>Team apparel logo*</li><li>Post-event toboggan display&dagger;</li></ul></div>
+      </div>
+      <div class="fine">
+        <p>Contributions under $500 are recognized as Friends of GNCTR Club at NAIT. R&eacute;sum&eacute;s are shared only with participating students&rsquo; consent.</p>
+        <p>*Apparel recognition depends on artwork, approval and production deadlines.</p>
+        <p>&dagger;Display opportunities require written NAITSA approval and agreed arrangements for transportation, insurance, scheduling and safe display.</p>
+      </div>
+      </div>
+      </div>
+      <div class="panel" id="support-panel">
+        <div class="panel-h">Support the team</div>
+        <div class="panel-b">
+<div class="cards">
+        <div class="card">
+          <h3>Sponsorship package</h3>
+          <p>See what sponsorship includes and how your logo and support are recognized.</p>
+          <div class="pkg-actions"><a class="btn btn-primary pkg" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" target="_blank" rel="noopener"><span class="lbl">Open the package</span></a><a class="btn" id="pkg-dl" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" download="GNCTR_at_NAIT_2027_Sponsorship_Package.pdf">Download PDF</a></div>
+        </div>
+        <div class="card">
+          <h3>Donations</h3>
+          <p>Every contribution goes to materials, tools and getting the team to the race.</p>
+          <a class="btn pkg" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" target="_blank" rel="noopener"><span class="lbl">Donate</span></a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <!-- LETTER OF SUPPORT -->
+    <section id="page-letter" class="page" hidden>
+      <div>
+        <p class="eyebrow">For our supporters</p>
+        <h2>Letter of support</h2>
+      </div>
+      <div class="two">
+        <div>
+          <h3>Why a letter helps</h3>
+          <p style="margin-top:12px">A short letter from a company, instructor, graduate or community member shows sponsors and funders that people stand behind the team.</p>
+          <p style="margin-top:12px">Use the template as a starting point. Change the bracketed parts so it says what you actually know about the team, then send it to an executive member or message us on Instagram.</p>
+        </div>
+        <div>
+          <div class="letter-head">
+            <p class="eyebrow" style="margin:0">Template letter</p>
+            <button type="button" class="btn" id="copy-letter">Copy letter</button>
+          </div>
+          <pre class="letter" id="letter-text">[Date]
+
+To whom it may concern,
+
+I am writing on behalf of [organization or yourself] to support GNCTR Club at NAIT, a student club competing in the Great Northern Concrete Toboggan Race (GNCTR).
+
+[Describe your connection to the club or to NAIT. For example: we have hired NAIT graduates, we have worked with these students, or we have seen the team's work.]
+
+The team gives students hands-on experience in design, concrete materials, fabrication, teamwork and fundraising. These skills matter in industry. [Add one or two sentences on why this matters to your organization.]
+
+I encourage you to support this team.
+
+Sincerely,
+[Name]
+[Title, organization]
+[Phone or email]</pre>
+          <p class="status" id="copy-status" role="status"></p>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Received</p>
+        <div class="empty"><b>No letters posted yet</b>Letters of support from our community will be listed here.</div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="page-gallery" class="page" hidden>
+      <div>
+        <p class="eyebrow">On and off the hill</p>
+        <h2>Gallery</h2>
+        <p class="lede">Scroll through photos from the lab, the shop and past races. Tap a photo to enlarge it.</p>
+      </div>
+      <div class="carousel">
+        <button type="button" class="car-btn prev" aria-label="Previous photos" disabled><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="gallery" id="gallery-track" tabindex="0" aria-label="Photo gallery. Scroll sideways to see more.">
+          <button type="button" class="g-item" aria-label="Enlarge photo: Two team members weighing gravel aggregate in the lab"><img src="assets/img/gallery/two-team-members-weighing-gravel-aggregate.jpg" alt="Two team members weighing gravel aggregate in the lab" width="768" height="1200" loading="lazy" style="object-position:50% 35%"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: A team member smiling while washing equipment at a lab sink"><img src="assets/img/gallery/a-team-member-smiling-while-washing.jpg" alt="A team member smiling while washing equipment at a lab sink" width="900" height="1200" loading="lazy" style="object-position:50% 25%"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: Team members working at lab benches with mixing bowls and testing equipment"><img src="assets/img/gallery/team-members-working-at-lab-benches.jpg" alt="Team members working at lab benches with mixing bowls and testing equipment" width="900" height="1200" loading="lazy" style="object-position:50% 40%"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: Team members and supporters posing with a red and yellow concrete toboggan at a snowy race site"><img src="assets/img/gallery/team-members-and-supporters-posing-with.jpg" alt="Team members and supporters posing with a red and yellow concrete toboggan at a snowy race site" width="800" height="552" loading="lazy"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: A large group of team members posing together in front of a dark angular wall"><img src="assets/img/gallery/a-large-group-of-team-members.jpg" alt="A large group of team members posing together in front of a dark angular wall" width="800" height="593" loading="lazy"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: Five team members in blue racing suits and helmets posing in the snow"><img src="assets/img/gallery/five-team-members-in-blue-racing.jpg" alt="Five team members in blue racing suits and helmets posing in the snow" width="800" height="789" loading="lazy"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: Team members in matching blue racing suits posing together in a blue-lit room"><img src="assets/img/gallery/team-members-in-matching-blue-racing.jpg" alt="Team members in matching blue racing suits posing together in a blue-lit room" width="703" height="800" loading="lazy"></button>
+          <button type="button" class="g-item" aria-label="Enlarge photo: Team members in winter gear gathered around a red train-themed toboggan in front of a ski hill"><img src="assets/img/gallery/team-members-in-winter-gear-gathered.jpg" alt="Team members in winter gear gathered around a red train-themed toboggan in front of a ski hill" width="800" height="514" loading="lazy"></button>
+        </div>
+        <button type="button" class="car-btn next" aria-label="Next photos"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <dialog id="lightbox" aria-label="Enlarged photo"><img alt=""><button type="button" class="btn btn-primary" id="lb-close">Close</button></dialog>
+    </section>
+
+    <!-- NEWS -->
+    <section id="page-news" class="page" hidden>
+      <div>
+        <p class="eyebrow">What we&rsquo;re up to</p>
+        <h2>Press &amp; updates</h2>
+        <p class="lede">Press coverage and team announcements.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-h">In the press</div>
+        <div class="panel-b">
+          <div class="card" style="background:var(--bg)">
+            <p class="meta">Global News</p>
+            <h3>Can you race a concrete toboggan? NAIT students say &lsquo;yes&rsquo;</h3>
+            <p>Our team was previously featured on Global News. Read the story about NAIT students taking on the Great Northern Concrete Toboggan Race.</p>
+            <div class="pkg-actions"><a class="btn btn-primary" href="https://globalnews.ca/news/10421930/alberta-edmonton-engineering-students-compete-great-northern-toboggan-race/" target="_blank" rel="noopener"><span class="lbl">Read on Globalnews.ca</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Team updates</div>
+        <div class="panel-b">
+          <div class="card" style="background:var(--bg)"><p class="meta">Sponsors</p><h3>Thurber Engineering joins as our first sponsor</h3><p>Bronze-level support to kick off the 2027 season.</p></div>
+          <div class="card" style="background:var(--bg)"><p class="meta">Sponsors</p><h3>Aman Builders joins as a Platinum sponsor</h3><p>Thank you for backing the team at our highest level.</p></div>
+          <div class="card" style="background:var(--bg)"><p class="meta">Sponsors</p><h3>LN LDT joins as a Bronze sponsor</h3><p>Thank you for your donation to the team.</p></div>
+          <div class="card" style="background:var(--bg)"><p class="meta">Sponsors</p><h3>Journey Engineering joins as a Silver sponsor</h3><p>Thank you for backing the team.</p></div>
+          <div class="card" style="background:var(--bg)"><p class="meta">Sponsors</p><h3>J.R. Paine &amp; Associates joins as a Silver sponsor</h3><p>Thank you for backing the team.</p></div>
+          <div class="card" style="background:var(--bg)"><p class="meta">Coming up</p><h3>GNCTR 2027, January 27&ndash;30 in Edmonton</h3><p>We are building toward a test run before the race.</p></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-h">Join the team</div>
+        <div class="panel-b">
+          <p class="lede">Want to design, build and race a concrete toboggan with us? Sign up through the link below.</p>
+          <div class="pkg-actions" style="margin-top:0"><a class="btn btn-primary" href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener"><span class="lbl">Join our team</span></a></div>
+        </div>
+      </div>
+      </section>
+
+    
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <strong>GNCTR Club at NAIT</strong>
+        <span>Edmonton, Alberta</span>
+        <small class="disc">A NAITSA campus club. The club does not speak or enter agreements on behalf of NAIT or NAITSA.</small>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Contact us</p>
+        <a href="mailto:gnctrclubnait@gmail.com">gnctrclubnait@gmail.com</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Follow us</p>
+        <a class="foot-ig" href="https://www.instagram.com/gnctr_nait/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+        <a class="foot-ig" href="https://linktr.ee/gnctrclubnait" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Linktree</span></a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Join us</p>
+        <a href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener">Join the team</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Bylaws</p>
+        <!-- When the bylaws are ready, replace the line below with: <a href="LINK" target="_blank" rel="noopener">View our bylaws</a> -->
+        <span class="foot-soon">Coming soon</span>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>&copy; 2026 GNCTR Club at NAIT</span><a href="https://gnctr2027.com" target="_blank" rel="noopener">gnctr2027.com</a></div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

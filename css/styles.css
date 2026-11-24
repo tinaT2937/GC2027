@@ -458,3 +458,27 @@ header{position:relative}
 .g-prev:hover,.g-prev:focus-visible{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,36,71,.26)}
 .g-prev:hover img{transform:scale(1.05)}
 @media (max-width:700px){.g-prev{height:min(30vh,230px)}}
+
+/* Ticker words: bullets come from CSS so the strip can be shortened on phones */
+.ticker-track em{font-style:normal}
+.ticker-track em::after{content:"\00a0\2022\00a0"}
+
+/* Phones: no big hero logo, compact ticker, smaller hero copy */
+@media (max-width:760px){
+  #page-about .hero .hero-logo{display:none}
+  #page-about .hero p{font-size:16.5px;line-height:1.55}
+  #page-about .hero .eyebrow{letter-spacing:.1em}
+  .ticker{border-radius:14px;padding:11px 14px;text-align:center}
+  .ticker-track{animation:none;display:block;width:auto}
+  .ticker-track span+span,.ticker-track .t-x{display:none}
+  .ticker-track span{font-size:clamp(11px,3.5vw,14px);letter-spacing:.08em;padding:0;white-space:nowrap}
+  .ticker-track em:nth-child(3)::after{content:""}
+}
+
+/* Very narrow phones: keep the countdown labels inside their tiles */
+@media (max-width:420px){
+  .rs-tiles{gap:6px}
+  .rs-tile{padding:10px 4px;border-radius:12px}
+  .rs-tile b{font-size:24px}
+  .rs-tile span{font-size:10px;letter-spacing:.04em}
+}

@@ -1,3 +1,4 @@
+
 (function () {
   document.documentElement.classList.add("js");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -12,7 +13,6 @@
     nav.classList.toggle("open", open);
     burger.setAttribute("aria-expanded", open ? "true" : "false");
     burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    document.body.style.overflow = open ? "hidden" : "";
     onScroll();
   }
   burger.addEventListener("click", function () { setMenu(!nav.classList.contains("open")); });
@@ -20,6 +20,15 @@
     a.addEventListener("click", function () { setMenu(false); });
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("click", function (e) { if (nav.classList.contains("open") && !nav.contains(e.target)) setMenu(false); });
+
+  /* toboggan run: the little sled slides down the rail as you scroll */
+  var run = document.querySelector(".run");
+  function runPos() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    run.style.setProperty("--p", max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+  }
+  if (run) { window.addEventListener("scroll", runPos, { passive: true }); window.addEventListener("resize", runPos); runPos(); }
 
   if ("IntersectionObserver" in window) {
     /* reveal on scroll */
@@ -103,3 +112,18 @@
     } else { fallback(); }
   });
 })();
+
+(function(){
+  var root=document.documentElement,reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches,tick=false;
+  function sp(){tick=false;root.style.setProperty("--sp",window.scrollY||0)}
+  if(!reduce){window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(sp)}},{passive:true});sp()}
+  var fine=window.matchMedia&&window.matchMedia("(hover:hover) and (pointer:fine)").matches&&window.innerWidth>900;
+  if(fine&&!reduce){
+    root.classList.add("js-fine");
+    var h=document.querySelector(".xh-h"),v=document.querySelector(".xh-v"),hx=document.getElementById("hud-x"),hy=document.getElementById("hud-y");
+    function p4(n){n=Math.round(n);return ("0000"+n).slice(-4)}
+    window.addEventListener("pointermove",function(e){h.style.transform="translateY("+e.clientY+"px)";v.style.transform="translateX("+e.clientX+"px)";hx.textContent=p4(e.clientX);hy.textContent=p4(e.clientY+window.scrollY)},{passive:true});
+  }
+})();
+
+document.addEventListener("click",function(e){var b=e.target.closest?e.target.closest("[data-scrollto]"):null;if(!b)return;var t=document.querySelector(b.getAttribute("data-scrollto"));if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"})}});

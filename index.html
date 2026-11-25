@@ -7,8 +7,8 @@
 <meta name="description" content="GNCTR Club at NAIT: a student team designing, building and racing a concrete toboggan at the Great Northern Concrete Toboggan Race, Edmonton, January 27-30, 2027.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-img-01.png">
+<link rel="apple-touch-icon" href="assets/img/icon-img-02.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;500;600&display=swap">
@@ -19,32 +19,37 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="index.html" aria-label="GNCTR NAIT home">
-      <img src="assets/img/logo.png" alt="" width="44" height="44">
+      <img src="assets/img/img-03.png" alt="" width="44" height="44">
       <span>GNCTR<br>NAIT</span>
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Main">
       <a href="about.html">About</a>
-      <a href="teams.html">Teams</a>
+      <a href="team.html">Team</a>
       <a href="sponsors.html">Sponsors</a>
-      <a href="letter.html">Letter of support</a>
       <a href="gallery.html">Gallery</a>
+      <a href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener">Join us</a>
       <a href="#contact">Contact</a>
+      <a class="btn btn-blue menu-cta" href="sponsors.html">Sponsor GNCTR</a>
     </nav>
-    <a class="btn btn-solid nav-cta" href="sponsors.html">Sponsor GNCTR</a>
+    <a class="btn btn-blue nav-cta" href="sponsors.html">Sponsor GNCTR</a>
     <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
+<div class="page" data-page="home">
   <section class="hero" aria-labelledby="hero-h">
     <div class="hero-bg" role="img" aria-label="The GNCTR NAIT team gathered around their toboggan in the snow"></div>
+    <div class="topo" aria-hidden="true"></div>
+    <div class="ruler" aria-hidden="true"></div>
     <div class="wrap hero-in">
       <p class="eyebrow">Great Northern Concrete Toboggan Race &middot; Edmonton &middot; Jan 27&ndash;30, 2027</p>
       <h1 id="hero-h">We pour concrete.<br>We race it<br>down a hill.</h1>
       <div class="hero-actions">
-        <a class="btn btn-solid btn-lg" href="sponsors.html">Sponsor GNCTR</a>
+        <a class="btn btn-blue btn-lg" href="sponsors.html">Sponsor GNCTR</a>
         <a class="btn btn-line btn-lg" href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener">Join the team</a>
       </div>
+      <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringpath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><g class="ring"><text><textPath href="#ringpath" textLength="496" lengthAdjust="spacing">GNCTR 2027 &#8226; Edmonton &#8226; Concrete &#8226; Snow &#8226; Engineering &#8226;</textPath></text></g><image href="assets/img/img-03.png" x="58" y="58" width="84" height="84"/></svg>
       <div class="count" aria-label="Time until race week">
         <p class="count-l">Race week begins in</p>
         <div class="count-g" id="countdown">
@@ -57,10 +62,6 @@
     </div>
   </section>
 
-  <div class="strip" aria-hidden="true"><div class="strip-track"><span>Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull; Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull;&nbsp;</span><span>Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull; Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull;&nbsp;</span></div></div>
-
-  <div class="strip" aria-hidden="true"><div class="strip-track"><span>Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull; Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull;&nbsp;</span><span>Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull; Concrete &bull; Snow &bull; Engineering &bull; Design &bull; Build &bull; Race &bull;&nbsp;</span></div></div>
-
   <section class="stats wrap" aria-label="GNCTR in numbers">
     <div class="stat reveal"><b data-count="500" data-suffix="+">500+</b><span>students hosted each year</span></div>
     <div class="stat reveal"><b data-count="1974">1974</b><span>the tradition began</span></div>
@@ -68,6 +69,7 @@
     <div class="stat reveal"><b data-count="5">5</b><span>riders per toboggan</span></div>
   </section>
 
+  <div class="dim" aria-hidden="true"><i></i><span>Section A&ndash;A &middot; Scale 1:20</span><i></i></div>
   <section class="sec">
     <div class="wrap">
       <p class="eyebrow">Who we are</p>
@@ -75,33 +77,36 @@
       <div class="split">
         <div class="prose reveal">
           <p>We are GNCTR Club at NAIT, a student-led team building a toboggan for the Great Northern Concrete Toboggan Race in Edmonton. We apply classroom learning to real engineering: concrete running surfaces, structural systems, steering and brakes that all have to work together on snow.</p>
-          <div class="hero-actions"><a class="btn btn-solid" href="about.html">About us and our timeline</a><a class="btn btn-line" href="teams.html">Meet the teams</a></div>
+          <div class="hero-actions"><a class="btn btn-solid" href="about.html">About us and our timeline</a><a class="btn btn-line" href="team.html">Meet the team</a></div>
         </div>
-        <figure class="about-photo reveal"><img src="assets/img/gallery/a-large-group-of-team-members.jpg" alt="The GNCTR NAIT team posing together indoors" width="800" height="593" loading="lazy"></figure>
+        <figure class="about-photo reveal"><img src="assets/img/img-04.jpg" alt="The GNCTR NAIT team posing together indoors" width="800" height="593" loading="lazy"></figure>
       </div>
     </div>
   </section>
 
+  <div class="truss" aria-hidden="true"></div>
   <section class="sec bg-sec cta-block">
-    <div class="sec-bg" style="--img:url('../assets/img/bg/fog-toboggan.jpg')"></div>
+    <div class="sec-bg" style="--img:url('../assets/img/bg-02.jpg')"></div>
     <div class="wrap">
       <p class="eyebrow">Become a partner</p>
       <h2 class="mega">Sponsor GNCTR</h2>
       <p class="lede">Your organization becomes part of a visible, hands-on student engineering project, in the year the national competition comes to Edmonton.</p>
-      <div class="hero-actions"><a class="btn btn-solid btn-lg" href="sponsors.html">Become a sponsor</a><a class="btn btn-line btn-lg" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" target="_blank" rel="noopener">Sponsorship package (PDF)</a></div>
+      <div class="hero-actions"><a class="btn btn-blue btn-lg" href="sponsors.html">Become a sponsor</a><a class="btn btn-line btn-lg" href="assets/docs/GNCTR_at_NAIT_2027_Sponsorship_Package.pdf" target="_blank" rel="noopener">Open sponsorship package</a></div>
       <h3 class="label">Thank you to our sponsors</h3>
       <div class="logos compact">
-        <div class="logo" role="img" aria-label="Aman Builders"><img src="assets/img/sponsors/aman-builders.svg" alt="" width="260" height="137"></div>
-        <div class="logo" role="img" aria-label="J.R. Paine &amp; Associates Ltd."><img src="assets/img/sponsors/jr-paine-associates.png" alt="" width="200" height="144"></div>
-        <div class="logo" role="img" aria-label="Journey Engineering"><img src="assets/img/sponsors/journey-engineering.jpg" alt="" width="520" height="206"></div>
-        <div class="logo" role="img" aria-label="Enoch Prism Engineering"><img src="assets/img/sponsors/enoch-prism-engineering.jpg" alt="" width="499" height="146"></div>
-        <div class="logo" role="img" aria-label="Thurber Engineering"><img src="assets/img/sponsors/thurber-engineering.png" alt="" width="200" height="77"></div>
-        <div class="logo" role="img" aria-label="LN LDT"><img src="assets/img/sponsors/ln-ldt.jpg" alt="" width="600" height="375"></div>
+        <div class="logo" role="img" aria-label="Aman Builders"><img src="assets/img/sponsor-aman-builders.svg" alt="" width="260" height="137"></div>
+        <div class="logo" role="img" aria-label="J.R. Paine &amp; Associates Ltd."><img src="assets/img/sponsor-j-r-paine-amp-associates-ltd.png" alt="" width="200" height="144"></div>
+        <div class="logo" role="img" aria-label="Journey Engineering"><img src="assets/img/sponsor-journey-engineering.jpg" alt="" width="520" height="206"></div>
+        <div class="logo" role="img" aria-label="Enoch Prism Engineering"><img src="assets/img/sponsor-enoch-prism-engineering.jpg" alt="" width="499" height="146"></div>
+        <div class="logo" role="img" aria-label="Thurber Engineering"><img src="assets/img/sponsor-thurber-engineering.png" alt="" width="200" height="77"></div>
+        <div class="logo" role="img" aria-label="LN LDT"><img src="assets/img/sponsor-ln-ldt.jpg" alt="" width="600" height="375"></div>
+          <div class="logo" role="img" aria-label="Edmonton Riverhawks"><img src="assets/img/sponsor-edmonton-riverhawks.jpg" alt="" width="400" height="400"></div>
         <div class="logo text" role="img" aria-label="Funded by NAITSA"><span>Funded by NAITSA</span></div>
       </div>
     </div>
   </section>
 
+  <div class="dim" aria-hidden="true"><i></i><span>Span 5 000 mm &middot; Load path</span><i></i></div>
   <section class="sec" >
     <div class="wrap">
       <p class="eyebrow">What we&rsquo;re up to</p>
@@ -113,6 +118,7 @@
       </a>
       <ul class="updates">
         <li><span>Coming up</span><b>GNCTR 2027, January 27&ndash;30 in Edmonton</b></li>
+        <li><span>Sponsors</span><b>Edmonton Riverhawks join as a Bronze sponsor</b></li>
         <li><span>Sponsors</span><b>Enoch Prism Engineering joins as a Silver sponsor</b></li>
         <li><span>Sponsors</span><b>Journey Engineering joins as a Silver sponsor</b></li>
         <li><span>Sponsors</span><b>J.R. Paine &amp; Associates joins as a Silver sponsor</b></li>
@@ -123,13 +129,15 @@
     </div>
   </section>
 
-  <section class="join" aria-labelledby="join-h">
+  <div class="truss" aria-hidden="true"></div>
+  <section class="join" data-fx="gears" aria-labelledby="join-h"><svg class="gears" viewBox="0 0 190 180" aria-hidden="true"><g class="gear g1" style="--k:0.16"><path d="M123.2 74.9 L132.4 76.5 L132.4 83.5 L123.2 85.1 L121.9 91.8 L129.7 96.8 L127.1 103.3 L118.0 101.3 L114.2 106.9 L119.5 114.6 L114.6 119.5 L106.9 114.2 L101.3 118.0 L103.3 127.1 L96.8 129.7 L91.8 121.9 L85.1 123.2 L83.5 132.4 L76.5 132.4 L74.9 123.2 L68.2 121.9 L63.2 129.7 L56.7 127.1 L58.7 118.0 L53.1 114.2 L45.4 119.5 L40.5 114.6 L45.8 106.9 L42.0 101.3 L32.9 103.3 L30.3 96.8 L38.1 91.8 L36.8 85.1 L27.6 83.5 L27.6 76.5 L36.8 74.9 L38.1 68.2 L30.3 63.2 L32.9 56.7 L42.0 58.7 L45.8 53.1 L40.5 45.4 L45.4 40.5 L53.1 45.8 L58.7 42.0 L56.7 32.9 L63.2 30.3 L68.2 38.1 L74.9 36.8 L76.5 27.6 L83.5 27.6 L85.1 36.8 L91.8 38.1 L96.8 30.3 L103.3 32.9 L101.3 42.0 L106.9 45.8 L114.6 40.5 L119.5 45.4 L114.2 53.1 L118.0 58.7 L127.1 56.7 L129.7 63.2 L121.9 68.2Z M66.6 80.0a13.4 13.4 0 1 0 26.9 0a13.4 13.4 0 1 0 -26.9 0Z" fill-rule="evenodd"/><path d="M80.0 80.0L118.4 80.0" /><path d="M80.0 80.0L99.2 113.3" /><path d="M80.0 80.0L60.8 113.3" /><path d="M80.0 80.0L41.6 80.0" /><path d="M80.0 80.0L60.8 46.7" /><path d="M80.0 80.0L99.2 46.7" /><circle cx="80" cy="80" r="27.8" fill="none"/></g><g class="gear g2" style="--k:-0.256"><path d="M173.9 111.8 L183.2 112.9 L183.2 120.3 L173.9 121.4 L171.9 127.5 L178.8 133.8 L174.5 139.8 L166.3 135.2 L161.2 139.0 L163.0 148.1 L156.0 150.4 L152.1 141.9 L145.7 141.9 L141.8 150.4 L134.8 148.1 L136.6 139.0 L131.4 135.2 L123.3 139.8 L119.0 133.8 L125.8 127.5 L123.8 121.4 L114.6 120.3 L114.6 112.9 L123.8 111.8 L125.8 105.8 L119.0 99.4 L123.3 93.5 L131.4 98.0 L136.6 94.3 L134.8 85.1 L141.8 82.9 L145.7 91.3 L152.1 91.3 L156.0 82.9 L163.0 85.1 L161.2 94.3 L166.3 98.0 L174.5 93.5 L178.8 99.4 L171.9 105.8Z M140.5 116.6a8.4 8.4 0 1 0 16.8 0a8.4 8.4 0 1 0 -16.8 0Z" fill-rule="evenodd"/><path d="M148.9 116.6L172.9 116.6" /><path d="M148.9 116.6L160.9 137.4" /><path d="M148.9 116.6L136.9 137.4" /><path d="M148.9 116.6L124.9 116.6" /><path d="M148.9 116.6L136.9 95.8" /><path d="M148.9 116.6L160.9 95.8" /><circle cx="148.8699122429963" cy="116.61878189729948" r="17.4" fill="none"/></g></svg>
     <div class="wrap">
       <h2 class="mega" id="join-h">Join the team.</h2>
       <p class="lede">Want to design, build and race a concrete toboggan with us? Sign up through the link below.</p>
       <a class="btn btn-solid btn-lg" href="https://www.ookslife.ca/organization/great-northern-concrete-toboggan-race-club" target="_blank" rel="noopener">Join GNCTR Club</a>
     </div>
   </section>
+</div>
 </main>
 
 <footer class="foot" id="contact">
@@ -141,9 +149,13 @@
       <div><h3>Follow us</h3><p><a href="https://www.instagram.com/gnctr_nait/" target="_blank" rel="noopener">Instagram @gnctr_nait</a></p><p><a href="https://linktr.ee/gnctrclubnait" target="_blank" rel="noopener">Linktree</a></p></div>
       <div><h3>The event</h3><p><a href="https://gnctr2027.com" target="_blank" rel="noopener">gnctr2027.com &#8599;</a></p></div>
     </div>
+    <div class="titleblock" aria-hidden="true"><div><span>Project</span><b>GNCTR 2027 toboggan</b></div><div><span>Dwg no.</span><b>GNCTR-27-001</b></div><div><span>Scale</span><b>1:1</b></div><div><span>Rev.</span><b>A</b></div><div><span>Sheet</span><b>1 of 1</b></div></div>
     <p class="copy">&copy; 2026 GNCTR Club at NAIT</p>
   </div>
 </footer>
+<div class="xh xh-h" aria-hidden="true"></div><div class="xh xh-v" aria-hidden="true"></div><div class="hud" aria-hidden="true">X <b id="hud-x">0000</b> &middot; Y <b id="hud-y">0000</b> mm &middot; Scale 1:1</div>
+<div class="run" aria-hidden="true"><i class="run-line"></i><svg class="run-sled" viewBox="0 0 28 20"><path d="M3 14h20c2 0 3 1 3 3"/><rect x="6" y="6" width="14" height="6" rx="2"/><path d="M5 17h18"/></svg></div>
+
 
 <script src="js/main.js" defer></script>
 </body>
